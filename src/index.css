@@ -1,13 +1,227 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(213, 213, 213);
+    font-family: 'poppin', sans-serif;
+    color: rgb(4, 0, 0);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.darkModes {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(28, 27, 27);
+    font-family: 'poppin', sans-serif;
+    color: rgb(254, 254, 254);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Note section */
+
+
+.note__section header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.notes__container {
+    width: 95%;
+    margin: 8% auto 0;
+}
+
+.note {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 10px 0;
+}
+
+.search__click {
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+    border: none;
+    color: rgb(0, 0, 40);
+    font-size: 16px;
+}
+
+.note a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.note a p {
+    margin-left: 68%;
+    color: rgb(1, 1, 78);
+    font-size: 0.98rem;
+}
+
+.btn {
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    color: rgb(38, 1, 1);
+}
+
+.search__icon {
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    color: white;
+}
+
+.btn:hover, .btn:focus {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.add__btn {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add__icon {
+    width: 8%;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 5%;
+}
+
+/* Mode */
+
+.flip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.flipBox {
+    width: 36px;
+    height: 18px;
+    background-color: black;
+    border-radius: 10px;
+    position: relative;
+}
+
+.darkMode.flipBox {
+    background-color: white;
+}
+
+.flipBox .span {
+    background-color: whitesmoke;
+    border-radius: 1px solid rgb(180, 15, 15);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    margin-top: 1.5px;
+}
+
+.span.darkMode {
+    background-color: black;
+    right: 0;
+}
+
+.flipBox p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dark, .darkMode.light {
+    opacity: 55%;
+}
+
+.darkMode.dark {
+    opacity: 100%;
+}
+
+/* Editor section */
+
+.warningMsg {
+    font-size: 15px;
+    display: flex;
+    color: rgb(174, 0, 0);
+    margin-left: 6%;
+}
+
+.editor {
+    height: 100%;
+}
+
+section .create__note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.btn.primary {
+    background-color: black;
+    color: whitesmoke;
+    padding: 2%;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.save {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 2%;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+form.create-note {
+    text-align: center;
+}
+
+form.create-note input {
+    width: 90%;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+}
+
+form.create-note textarea {
+    margin-top: 5%;
+    min-width: 85%;
+    max-width: 85%;
+    padding: 10px;
+    height: 30%;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    max-height: 500px;
+}
+
+form.create-note textarea:focus, form.create-note textarea:hover {
+    border: 1px solid black;
+}
+
+@media (min-width: 450px) {
+    .App {
+        padding: 5%;
+        margin: auto;
+        max-width: 700px;
+    }
 }
